@@ -10,7 +10,7 @@ class Solution {
         // shuu:做过的 代码 没写思路
         int maxVal = 0;
         // 数组最大值
-
+        // 遍历求最大值
         for (int i = 0; i < nums.length; i++) {
             maxVal = Math.max(maxVal, nums[i]);
         }
