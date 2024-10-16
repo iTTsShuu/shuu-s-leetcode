@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "problems"
+    ],
+    "editor.fontVariations": false,
+    "editor.codeActionsOnSave": {
+        
+    },
+    "maven.view": "hierarchical",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.dependency.packagePresentation": "flat",
+    "java.project.explorer.showNonJavaResources": true,
+    "java.dependency.syncWithFolderExplorer": true
+}
