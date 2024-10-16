@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-class teteSolution {
+class Solution {
     public int minDistance(String word1, String word2) {
         char[] word1C = word1.toCharArray();
         char[] word2C = word2.toCharArray();
@@ -34,6 +34,7 @@ class teteSolution {
     }
 
     // shuu: 这是什么东西 马勒戈壁 我当时在想什么
+    // 好像是笔试某题的代码 存疑
     public int countMax(int[] bricks, int x, int y) {
         int a = bricks[0], b = bricks[1], c = bricks[2];
         if (c > a && c > b) {
@@ -70,7 +71,7 @@ class test72 {
     public static void main(String[] args) {
         int[] abc = new int[] { 10, 0, 0 };
         int x = 1, y = 1;
-        teteSolution solution = new teteSolution();
+        Solution72 solution = new Solution72();
         System.out.println(solution.countMax(abc, x, y));
     }
 }
