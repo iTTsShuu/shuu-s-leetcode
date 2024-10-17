@@ -9,7 +9,7 @@
     },
     "maven.view": "hierarchical",
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.dependency.packagePresentation": "flat",
+    "java.dependency.packagePresentation": "hierarchical",
     "java.project.explorer.showNonJavaResources": true,
     "java.dependency.syncWithFolderExplorer": true
 }
