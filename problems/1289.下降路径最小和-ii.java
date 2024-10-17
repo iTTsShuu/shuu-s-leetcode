@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
     public int minFallingPathSum(int[][] grid) {
+        // 递归
         // int n = grid.length;
         // int[] mins = new int[n];
         // for (int i = 0; i < n; i++) {
@@ -23,6 +24,8 @@ class Solution {
         if (n == 1) {
             return grid[0][0];
         }
+        // shuu: dp[i][j]=Min(dp[i-1][0:j-1~j+1:n-1])+grid[i][j]
+        // 这里的dp[i]只与dp[i-1]有关 可以用2个数组滚动优化空间
         int dp[][] = new int[n][n];
         for (int i = 0; i < n; i++) {
             dp[0][i] = grid[0][i];
