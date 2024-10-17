@@ -1,4 +1,4 @@
-package classes;
+package my_classes;
 
 public class ListNode {
     public int val;
