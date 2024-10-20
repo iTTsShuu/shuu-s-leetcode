@@ -29,6 +29,7 @@ class Solution {
             ans.add(new ArrayList<>(pos)); // 执行拷贝，避免pos回溯后变为空列表
             return;
         }
+        // 尝试所有未尝试的元素
         for (i = 0; i < n; i++) {
             if (!used[i]) { // 当前位置元素未被使用
                 pos.add(nums[i]);
