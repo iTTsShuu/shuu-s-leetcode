@@ -9,34 +9,34 @@ import java.util.List;
 
 // @lc code=start
 class Solution {
+
+    List<List<Integer>> ansList = new ArrayList<>();
+
     public List<List<Integer>> combine(int n, int k) {
-        List<List<Integer>> anList=new ArrayList<>();
-        backTrack(anList, new ArrayList<>(), n, k, 0,0);
-        return anList;
+        backTrack(new ArrayList<>(), n, k, 0, 0);
+        return ansList;
     }
-    public void backTrack(List<List<Integer>> ansList,List<Integer> curCom
-    , int n, int k , int depth, int last){
-        if(depth == k){
-            List<Integer> temp=new ArrayList<>();
+
+    // shuu: last是添加数的位置下标 depth代表当前长度
+    public void backTrack(List<Integer> curCom, int n, int k, int depth, int last) {
+        if (depth == k) {
+            List<Integer> temp = new ArrayList<>();
             temp.addAll(curCom);
             ansList.add(temp);
-        }
-        else{
+        } else {
             for (int i = last; i < n; i++) {
-                curCom.add(i+1); 
-                backTrack(ansList, curCom, n, k, depth+1, i+1);
+                curCom.add(i + 1);
+                backTrack(curCom, n, k, depth + 1, i + 1);
                 curCom.remove(depth);
             }
-            
         }
     }
 }
 // @lc code=end
 
-class test{
+class test {
     public static void main(String[] args) {
-        Solution solution=new Solution();
+        Solution solution = new Solution();
         solution.combine(4, 2);
-
     }
 }
