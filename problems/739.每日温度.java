@@ -7,7 +7,10 @@
 // @lc code=start
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Deque;
+import java.util.List;
 
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
@@ -26,4 +29,15 @@ class Solution {
         return answer;
     }
 }
+
 // @lc code=end
+class test739 {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>(Arrays.asList("2", "2", "6", "7", "4"));
+        for (int i = 0; i < list.size(); i++) {
+            if ("2".equals(list.get(i))) {
+                list.remove(i);
+            }
+        }
+    }
+}

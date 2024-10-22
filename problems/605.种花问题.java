@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        // 一次 遍历 检查每个位置是否可以插花 可插花时n-1 判断n最后是否为负
         for (int i = 0; i < flowerbed.length; i++) {
             if (flowerbed[i] == 0 && check(flowerbed, i)) {
                 flowerbed[i] = 1;
