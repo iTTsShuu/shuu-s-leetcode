@@ -34,19 +34,19 @@ class Solution {
         // return ans;
         // }
 
+        // ?非递归的写法：迭代遍历更改
+        ListNode pre = null, curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+
         // shuu:
         // 重写的递归函数
-        return reverseList1(head, null);
-
-        // ?非递归的写法：迭代遍历更改
-        // ListNode pre = null, curr = head;
-        // while (curr != null) {
-        // ListNode next = curr.next;
-        // curr.next = pre;
-        // pre = curr;
-        // curr = next;
-        // }
-        // return pre;
+        // return reverseList1(head, null);
     }
 
     // 反转链表

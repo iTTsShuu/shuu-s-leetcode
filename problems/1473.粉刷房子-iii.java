@@ -4,11 +4,10 @@
  * [1473] 粉刷房子 III
  */
 
-// @lc code=start
+// @lc code=start147
 class Solution {
     public int minCost(int[] houses, int[][] cost, int m, int n, int target) {
 
     }
 }
 // @lc code=end
-

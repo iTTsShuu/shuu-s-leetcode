@@ -27,23 +27,23 @@ class Node {
 
 class Solution {
     public Node copyRandomList(Node head) {
-        Map<Node ,Node > map=new HashMap();
+        Map<Node, Node> map = new HashMap();
         copydfs(head, map);
         return map.get(head);
     }
-    public Node copydfs(Node head,Map<Node , Node> map){
-        if(head==null){
+
+    public Node copydfs(Node head, Map<Node, Node> map) {
+        if (head == null) {
             return null;
         }
-        if(!map.containsKey(head)){
-            Node copy=new Node(head.val);
+        if (!map.containsKey(head)) {
+            Node copy = new Node(head.val);
             map.put(head, copy);
-            copy.next=copydfs(head.next,map);
-            copy.random=copydfs(head.random,map);
+            copy.next = copydfs(head.next, map);
+            copy.random = copydfs(head.random, map);
 
         }
         return map.get(head);
     }
 }
 // @lc code=end
-

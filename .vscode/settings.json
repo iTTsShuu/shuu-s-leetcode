@@ -8,7 +8,7 @@
         
     },
     "maven.view": "hierarchical",
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.updateBuildConfiguration": "automatic",
     "java.dependency.packagePresentation": "hierarchical",
     "java.project.explorer.showNonJavaResources": true,
     "java.dependency.syncWithFolderExplorer": true

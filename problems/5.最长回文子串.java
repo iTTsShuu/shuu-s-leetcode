@@ -40,5 +40,31 @@ class Solution {
         }
         return s.substring(begin, begin + maxL);
     }
+
+    public String longestPalindrome1(String s) {
+        int sLength = s.length();
+        if (sLength == 1) {
+            return s;
+        }
+        boolean[][] isPalin = new boolean[sLength][sLength];
+        for (int i = 0; i < sLength; i++) {
+            isPalin[i][i] = true;
+        }
+        int maxL = 1;
+        int begin = 0;
+        for (int i = 0; i < sLength; i++) {
+            for (int j = i; i < sLength; i++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    if (i < sLength - 1 && j > 0) {
+                        // shuu:就是这个地方 蠢了 mb cao
+                        if (isPalin[i + 1][j - 1]) {
+                            isPalin[i][j] = true;
+                        }
+                    }
+                }
+            }
+        }
+        return s.substring(begin, begin + maxL);
+    }
 }
 // @lc code=end

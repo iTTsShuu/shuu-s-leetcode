@@ -43,6 +43,9 @@ class Solution {
                 cur = next;
             }
             // 此时cur 为下一段的第一个节点
+            // 注意p0是反转这一段的上一个节点p0-next为反转部分的最后一个（原来的第一个）
+            // 而原来的第一个反转后指向null 需要将原来的 上一个指向cur(下一段的第一个节点)
+            // 再将p0移动到反转部分的最后一个（原来的第一个）
             ListNode nextP0 = p0.next;
             p0.next.next = cur;
             p0.next = pre;
