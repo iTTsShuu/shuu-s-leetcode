@@ -57,7 +57,7 @@ class Solution {
         return head.next;
     }
 
-    // 通过优先队列进行合并
+    // 通过优先队列进行合并 重写PriorityQueue的compare方法
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> nodeQueue = new PriorityQueue<>((n1, n2) -> {
             return n1.val - n2.val;
@@ -72,8 +72,10 @@ class Solution {
         while (!nodeQueue.isEmpty()) {
             // 每次取到的都是最小值
             ListNode f = nodeQueue.poll();
+            // 合并tail与f
             tail.next = f;
             tail = tail.next;
+            // 将f的下一个节点重新加入堆
             f = f.next;
             if (f != null) {
                 nodeQueue.offer(f);

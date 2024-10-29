@@ -41,8 +41,10 @@ class Solution {
         return root;
     }
 
+    // 通过先序找根， 在定位中序中的根 分为左子树和右子树 递归进行修改
     public TreeNode mybuildTree(int[] preorder, int[] inorder,
-            int prestart, int preend, int instart, int inend) {
+            int prestart, int preend,
+            int instart, int inend) {
         if (prestart > preend) {
             return null;
         }
