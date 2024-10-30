@@ -29,6 +29,7 @@ class Solution {
         boolean lca = dfs(root.left, p, q);
         boolean rca = dfs(root.right, p, q);
         // shuu: 这里的判断一眼抄 我真会抄吧
+        // shuu:呵呵 抄个屁 全是我自己做的！！！！
         if ((lca && rca) || (((root.val == p.val) || (root.val == q.val)) && (lca || rca))) {
             ans = root;
         }
@@ -36,7 +37,7 @@ class Solution {
     }
 
     // 重写递归的方法函数
-
+    // shuu:好吧这一段好像是抄的
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 当前节点为空 或为 p，q时 直接返回当前节点
         if (root == null || root == p || root == q) {
