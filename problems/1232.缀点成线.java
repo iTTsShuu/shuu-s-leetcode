@@ -7,13 +7,15 @@
 // @lc code=start
 class Solution {
     public boolean checkStraightLine(int[][] coordinates) {
-        int x=coordinates[0][0],y=coordinates[0][1];
+        int x = coordinates[0][0], y = coordinates[0][1];
         for (int i = 0; i < coordinates.length; i++) {
-            coordinates[i][0]-=x;
-            coordinates[i][1]-=y;
+            coordinates[i][0] -= x;
+            coordinates[i][1] -= y;
         }
+        // 就是比较了斜率 是的
+        // shuu: 比较斜率大法好
         for (int i = 1; i < coordinates.length; i++) {
-            if(coordinates[1][0]*coordinates[i][1]!=coordinates[1][1]*coordinates[i][0]){
+            if (coordinates[1][0] * coordinates[i][1] != coordinates[1][1] * coordinates[i][0]) {
                 return false;
             }
         }
@@ -22,11 +24,10 @@ class Solution {
 }
 // @lc code=end
 
-class Test{
+class Test {
     public static void main(String[] args) {
-        int[][] coor={{1,2},{2,3},{3,4},{4,5},{5,6},{6,7}};
-        Solution solution=new Solution();
+        int[][] coor = { { 1, 2 }, { 2, 3 }, { 3, 4 }, { 4, 5 }, { 5, 6 }, { 6, 7 } };
+        Solution solution = new Solution();
         System.out.println(solution.checkStraightLine(coor));
     }
 }
-
