@@ -9,7 +9,7 @@ class Solution {
     public String minWindow(String s, String t) {
         int l = 0, r = 0;
         int m = s.length();
-        // hash表
+        // hash表 计数 'a'-'Z' 统计大写和小写 'a'-'z' 'A'-'Z'
         int[] cntS = new int[128];
         int[] cntT = new int[128];
         // 计数t
@@ -23,8 +23,8 @@ class Solution {
         boolean flag = false;
         while (r < m) {
             char ch = s.charAt(r);
-            cntS[ch]++;
-            while (isCovered(cntS, cntT)) {
+            cntS[ch]++; // 统计当前字符到窗口
+            while (isCovered(cntS, cntT)) { // cover时不断移动左端点
                 flag = true;
                 // 维护最短左右节点
                 if (ansR - ansL > r - l) {

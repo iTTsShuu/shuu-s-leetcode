@@ -52,7 +52,7 @@ class Solution {
             if (queue.isEmpty() || nums[i] <= nums[queue.peekLast()]) {
                 queue.addLast(i);
             } else {
-                // 这种情况 为了保持单调性 移除到更大zhi
+                // 这种情况 为了保持单调性 移除到更大值
                 while (!queue.isEmpty() && nums[i] > nums[queue.peekLast()]) {
                     queue.removeLast();
                 }

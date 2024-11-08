@@ -28,15 +28,30 @@ class Solution {
          */
 
         // 双指针
-        for (int i = 0, j = 0; i < nums.length; i++) {
-            if (nums[j] == 0) {
-                if (nums[i] != 0) {
-                    swap(i, j, nums);
-                    j++;
+        // for (int i = 0, j = 0; i < nums.length; i++) {
+        // if (nums[j] == 0) {
+        // if (nums[i] != 0) {
+        // swap(i, j, nums);
+        // j++;
+        // }
+        // } else {
+        // j++;
+        // }
+        // }
+
+        // 双指针更易理解版
+        int l = 0, r = 0;
+        // l标识已处理的序列末尾 r标识未处理的序列开头
+        while (r < nums.length) {
+            if (nums[l] == 0) {
+                if (nums[r] != 0) {
+                    swap(l, r, nums);
+                    l++;
                 }
             } else {
-                j++;
+                l++;
             }
+            r++;
         }
     }
 

@@ -6,11 +6,8 @@
 
 // @lc code=start
 
-import java.util.concurrent.*;
-
 class Solution {
     public long maximumOr(int[] nums, int k) {
-        ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
 
         return 0;
     }
