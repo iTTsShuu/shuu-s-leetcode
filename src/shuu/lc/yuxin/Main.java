@@ -4,15 +4,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    // 1
     public static String hitOrNot(double h, double r, double x0, double v1, double v2) {
         // 计算距离
         double dis = Math.sqrt(x0 * x0 + h * h);
         double time = dis / v2;
-
         double disz = time * v1;
+
         return disz > x0 + r || disz < x0 - r ? "No" : "Yes";
     }
 
+    // 2
     public static void operationIX(int op, int ii, int x, int[] a) {
         int cnt = 0;
         switch (op) {
@@ -28,6 +30,7 @@ public class Main {
         }
     }
 
+    // 3
     public static int minMinus(int[] a) {
         // 顺序无关 先排个序
         Arrays.sort(a);

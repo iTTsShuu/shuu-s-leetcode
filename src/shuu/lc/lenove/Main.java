@@ -46,7 +46,7 @@ public class Main {
         // 最后小于9的
         ans.insert(0, n);
 
-        return ans;
+        return ans.toString();
     }
 
     public static int mostVisit(int[][] toVisit, int n, int m) {
