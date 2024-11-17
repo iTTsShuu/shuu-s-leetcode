@@ -29,6 +29,9 @@ class Solution {
             return;
         }
         if (grid[i][j] == 0) {
+            // 同一套代码
+            // shuu: 这里标记为边的思想为递归时
+            // 只会从岛屿递归到非岛屿 每次递归到非岛屿都代表遇到一个边
             zhouchang++;
             return;
         }

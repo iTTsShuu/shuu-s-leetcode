@@ -36,6 +36,9 @@ class Solution {
         // 分别求最大子数组和 和 最小子数组和
         int preMax = 0, preMin = 0;
         int maxSum = Integer.MIN_VALUE, minSum = Integer.MAX_VALUE;
+        // 算最大最小值分别讨论数组跨过右边界和没有跨过右边界的情况
+        // 子数组没有跨过右边界情况下 直接求最大值
+        // 子数组跨过右边界求剩余数组的最小值 用和减可得最大子数组的和
         int sum = 0;
         for (int i : nums) {
             // 分别求最小和最大前缀
