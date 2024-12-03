@@ -7,16 +7,14 @@
 // @lc code=start
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 class Solution {
     List<List<String>> anss = new ArrayList<>();
 
-    // 标记每行的皇后位置
     public List<List<String>> solveNQueens(int n) {
+        // 标记每行的皇后位置
         int[] posQ = new int[n];
-
         // 储存列是否有皇后
         boolean[] onPath = new boolean[n];
         // 储存当前左上和右上的对角线是否有皇后
@@ -25,7 +23,6 @@ class Solution {
         int m = 2 * n - 1;
         boolean[] leftUp = new boolean[m];
         boolean[] rightUp = new boolean[m];
-        Arrays.fill(onPath, false);
         dfs(0, n, posQ, onPath, leftUp, rightUp);
         return anss;
     }
